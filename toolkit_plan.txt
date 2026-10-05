@@ -1,0 +1,87 @@
+=====================================================
+PERSONAL MINI-TOOLKIT - PLAN
+=====================================================
+
+1. MY TOOLS (one sentence each)
+-------------------------------
+Tool 1 - Number Guessing Game:
+  The computer picks a secret number from 1 to 20 and the player keeps
+  guessing, getting "too high" or "too low" hints, until they win or run
+  out of 6 tries.
+
+Tool 2 - To-Do List:
+  The user can add tasks, view them, mark one as done (removing it) and
+  clear everything, using a list that changes while the program runs.
+
+Tool 3 - Simple Calculator:
+  The user enters two numbers and an operator (+, -, *, /) and the
+  program prints the answer, refusing to divide by zero.
+
+Tool 4 - Name Formatter:
+  The user types their first and last name in any messy capitalisation
+  and the program shows it neatly formatted, plus their initials.
+
+
+2. EXACT MENU TEXT
+------------------
+Welcome to the Personal Mini-Toolkit!
+
+========== MAIN MENU ==========
+1. Number Guessing Game
+2. To-Do List
+3. Simple Calculator
+4. Name Formatter
+5. Quit
+===============================
+Choose a tool (1-5):
+
+Invalid choice message:
+  Oops! "<what they typed>" is not on the menu. Please type a number from 1 to 5.
+
+Goodbye message:
+  Thanks for using the Personal Mini-Toolkit. See you next time!
+
+
+3. CONCEPTS USED BY EACH TOOL
+-----------------------------
+Main menu:
+  - while loop (runs until the user picks Quit)
+  - if / elif / else to route the choice
+  - f-string for the invalid-choice message
+  - input() and print()
+
+Tool 1 - Number Guessing Game:
+  - while loop (keeps asking for guesses)
+  - conditionals (too high / too low / correct)
+  - variables (secret number, tries counter)
+  - f-strings (tries left, results)
+  - try / except so letters do not crash it
+
+Tool 2 - To-Do List:
+  - LIST that changes at runtime (append, pop, clear)
+  - while loop (its own sub-menu)
+  - for loop with enumerate (numbered display)
+  - conditionals (empty list check, valid number check)
+  - f-strings
+
+Tool 3 - Simple Calculator:
+  - conditionals (if / elif for the operator, zero check)
+  - variables (two numbers, result)
+  - f-strings
+  - try / except so letters do not crash it
+
+Tool 4 - Name Formatter:
+  - variables and string methods (strip, title, upper)
+  - conditionals (empty-input check)
+  - f-strings
+
+
+4. TESTING CHECKLIST
+--------------------
+[ ] Menu choice 1, 2, 3, 4 each run once
+[ ] Menu choice 5 quits with a goodbye message
+[ ] Invalid menu choices ("9", "hello", empty) do not crash
+[ ] Guessing game: win, lose, letters instead of numbers
+[ ] To-Do: add, view, done, clear, view empty list, bad number
+[ ] Calculator: each operator, divide by zero, bad number
+[ ] Name Formatter: messy capitalisation, empty input
